@@ -23,4 +23,40 @@ In this article i will explain a simple solution based in a recursive function a
 * Codify a basic class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download  [S3CmdInCSharp](https://github.com/aragostinho/S3CmdInCSharp)
 
 
+**Using a simples foreach**
+
+*Code:
+
+<pre>
+<code>
+  static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
+        {
+            foreach (string dirPath in Directory.GetDirectories(localDir))
+            {
+string currentFolder = Path.GetFileName(dirPath);
+string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\", "/") : dirPath.Replace(@"\", "/");
+
+                Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
+                foreach (string filePath in Directory.GetFiles(dirPath))
+                {
+                    string currentFile = Path.GetFileName(filePath);
+                    using (Stream fileStream = File.Open(filePath, FileMode.Open))
+                    {
+     pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,    
+     currentFile));
+Console.WriteLine(string.Format("Arquivo {0} replicado", 
+            Path.GetFileName(filePath)));
+                    }
+                }
+                ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
+            }
+        } 
+
+</code>
+</pre>
+
+
+*Results:
+
+
 ![Perfomance Case 1](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result1.png?raw=true"Perfomance Case 1")
