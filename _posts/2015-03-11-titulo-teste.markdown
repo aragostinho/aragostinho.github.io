@@ -29,12 +29,12 @@ In this article i will explain a simple solution based in a recursive function a
 
 <pre>
 <code>
-  static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
+         static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
         {
             foreach (string dirPath in Directory.GetDirectories(localDir))
             {
-string currentFolder = Path.GetFileName(dirPath);
-string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\", "/") : dirPath.Replace(@"\", "/");
+                string currentFolder = Path.GetFileName(dirPath);
+                string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\", "/") : dirPath.Replace(@"\", "/");
 
                 Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
                 foreach (string filePath in Directory.GetFiles(dirPath))
@@ -42,16 +42,15 @@ string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty)
                     string currentFile = Path.GetFileName(filePath);
                     using (Stream fileStream = File.Open(filePath, FileMode.Open))
                     {
-     pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,    
-     currentFile));
-Console.WriteLine(string.Format("Arquivo {0} replicado", 
-            Path.GetFileName(filePath)));
+                        pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,
+                        currentFile));
+                        Console.WriteLine(string.Format("Arquivo {0} replicado",
+                                    Path.GetFileName(filePath)));
                     }
                 }
                 ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
             }
-        } 
-
+        }
 </code>
 </pre>
 
