@@ -25,7 +25,7 @@ In this article i will explain a simple solution based in a recursive function a
 
 **Using a simples foreach**
 
-*Code:
+* Code:
 
 <pre>
 <code>
@@ -56,7 +56,7 @@ Console.WriteLine(string.Format("Arquivo {0} replicado",
 </pre>
 
 
-*Results:
+* Results:
 
 
 ![Perfomance Case 1](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result1.png?raw=true"Perfomance Case 1")
