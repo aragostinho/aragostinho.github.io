@@ -150,11 +150,13 @@ In this article i will explain a simple solution based in a recursive function a
 ![Perfomance Case 3](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result3.png?raw=true"Perfomance Case 3")
 
 
-
+<p>
 **Comparing the results**
 
 ![Summary](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Summary.PNG?raw=true"Perfomance Case 3")
+</p>
 
-
+<p>
 **Conclusion**
 The use of Parallel was possible in this case because the copy of files can be executed in many threads without locked or process concurrence. Each iteration opened and release a stream file to be transfer in BAmazonS3() class. After that BAmazonS3() class just send the stream to S3 Buckets using the SaveObjectMethod().   The gain of performance was 900% in the first case using parallelism in files iteration, and 946% in the second case using parallelism in files iteration. The gain in the second case could be higher, but in my scenario each folder had 5 files on average.
+</p>
