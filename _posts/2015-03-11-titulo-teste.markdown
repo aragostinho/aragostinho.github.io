@@ -20,4 +20,4 @@ In this article i will explain a simple solution based in a recursive function a
 **Setup**
 
 * Download the last version of [Amazon SDK for .Net](https://www.nuget.org/packages/AWSSDK) from Nuget
-* Codify a basic class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download the a (S3CmdInCSharp)[https://github.com/aragostinho/S3CmdInCSharp] example
+* Codify a basic class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download  [S3CmdInCSharp](https://github.com/aragostinho/S3CmdInCSharp)
