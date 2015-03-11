@@ -15,10 +15,9 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
 **About the solution**
 
-In this article i will explain a simple solution based in a recursive function and after that i will discuss how to optimize the code to achieve the goal efficiently. You can download the solution in [https://github.com/aragostinho/CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
+In this article i will explain a simple solution based in a recursive function and after that i will discuss how to optimize the code to achieve the goal efficiently. You can download the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
 
 **Setup**
 
-* Download the last version of [https://www.nuget.org/packages/AWSSDK/](Amazon SDK for .Net) from Nuget
-* Codify a baisc class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, download the a solution [https://github.com/aragostinho/S3CmdInCSharp
-](BAmazonS3) 
+* Download the last version of [Amazon SDK for .Net](https://www.nuget.org/packages/AWSSDK) from Nuget
+* Codify a baisc class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download the a (S3CmdInCSharp)[https://github.com/aragostinho/S3CmdInCSharp] example  
