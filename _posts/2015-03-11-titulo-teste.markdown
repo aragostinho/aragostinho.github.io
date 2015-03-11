@@ -23,6 +23,10 @@ In this article i will explain a simple solution based in a recursive function a
 * Codify a basic class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download  [S3CmdInCSharp](https://github.com/aragostinho/S3CmdInCSharp)
 
 
+
+
+
+
 **Using a simples foreach**
 
 * Code:
@@ -59,3 +63,98 @@ In this article i will explain a simple solution based in a recursive function a
 
 
 ![Perfomance Case 1](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result1.png?raw=true"Perfomance Case 1")
+
+
+
+
+
+
+**Using Parallell.ForEach to list all directories**
+
+* Code:
+
+<pre>
+<code>
+          static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
+        {
+            Parallel.ForEach(Directory.GetDirectories(localDir), dirPath =>
+            {
+                string currentFolder = Path.GetFileName(dirPath);
+                string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\", "/") : dirPath.Replace(@"\", "/");
+
+                Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
+                foreach (string filePath in Directory.GetFiles(dirPath))
+                {
+                    string currentFile = Path.GetFileName(filePath);
+                    using (Stream fileStream = File.Open(filePath, FileMode.Open))
+                    {
+                        pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,
+                         currentFile));
+                        Console.WriteLine(string.Format("Arquivo {0} replicado",
+                        Path.GetFileName(filePath)));
+                    }
+                }
+                ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
+            });
+        }
+</code>
+</pre>
+
+
+* Results:
+
+
+![Perfomance Case 2](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result2.png?raw=true"Perfomance Case 2")
+
+
+
+
+
+**Using Parallell.ForEach to list all directories and images**
+
+* Code:
+
+<pre>
+<code>
+          static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
+        {
+            Parallel.ForEach(Directory.GetDirectories(localDir), dirPath =>
+            {
+                string currentFolder = Path.GetFileName(dirPath);
+                string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\",
+                                    "/") : dirPath.Replace(@"\", "/");
+
+                Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
+                Parallel.ForEach(Directory.GetFiles(dirPath), filePath =>
+                {
+                    string currentFile = Path.GetFileName(filePath);
+                    using (Stream fileStream = File.Open(filePath, FileMode.Open))
+                    {
+                        pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,
+                        currentFile));
+                        Console.WriteLine(string.Format("Arquivo {0} replicado",
+                        Path.GetFileName(filePath)));
+                    }
+                });
+                ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
+            });
+        }
+
+</code>
+</pre>
+
+
+* Results:
+
+
+![Perfomance Case 3](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Result3.png?raw=true"Perfomance Case 3")
+
+
+
+**Comparing the results**
+
+![Summary](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Summary.PNG?raw=true"Perfomance Case 3")
+
+
+**Conclusion**
+The use of Parallel was possible in this case because the copy of files can be executed in many threads without locked or process concurrence. Each iteration opened and release a stream file to be transfer in BAmazonS3() class. After that BAmazonS3() class just send the stream to S3 Buckets using the SaveObjectMethod().   The gain of performance was 900% in the first case using parallelism in files iteration, and 946% in the second case using parallelism in files iteration. The gain in the second case could be higher, but in my scenario each folder had 5 files on average.
