@@ -6,7 +6,7 @@ layout: post
 **Introduction**
 
 If you started to work with AWS services and need to transfer your files to S3 buckets in a solution that has many and large directories with thousands or millions files, this article can be useful to you.
-In this article i'll show and provide a simple solution based in a recursive function, after that i will demonstrate two code changes that will increase the performance during the execution plan achieving the goal efficiently. Finally, you can get the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3). Enjoy it  :)
+In this article I'll show and provide a simple solution based in a recursive function, after that I will demonstrate two code changes that will increase the performance during the execution plan achieving the goal efficiently. Finally, you can get the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3). Enjoy it  :)
 
 
 **A simple scenario**
