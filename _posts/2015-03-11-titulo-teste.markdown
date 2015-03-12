@@ -19,7 +19,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
 * Download the last version of [Amazon SDK for .Net](https://www.nuget.org/packages/AWSSDK) from Nuget
 * Code a basic class with methods like *SaveFile()*, *DeleteFile()*, *ListFiles()*, etc.  If you have doubts how to do this, you can download  [S3CmdInCSharp](https://github.com/aragostinho/S3CmdInCSharp)
-* Code a simple recursive function to search all folders, subfolders and files. In this solution i coded a simple *tail recursion*. In a [tail recursion](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Recursions/recursions.html) , basically the functions is invoked in the end, after to execute all statements.
+* Code a simple recursive function to search all folders, subfolders and files. In this solution a used a *tail recursion*. In a [tail recursion](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Recursions/recursions.html) , basically the functions is invoked in the end, after to execute all statements.
 
 
 
