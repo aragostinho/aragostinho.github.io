@@ -7,15 +7,14 @@ layout: post
 
 If you started to work with AWS services and need to transfer your files to S3 buckets and your company has large directories with thousands or millions files, this article can be useful to you.
 
+In this article i'll show and provide a simple solution based in a recursive function, after that i will demonstrate two code changes that will increase the performance during the execution plan achieving the goal efficiently. You can download the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
+
+
 **A simple scenario**
 
 A folder named *CompanyFiles*  that contains  17.917 Sub Folders and 45.090 Files. Total of 181Mb.
 I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
-
-**About the solution**
-
-In this article i'll show and provide a simple solution based in a recursive function, after that i will demonstrate two code changes that will increase the performance during the execution plan achieving the goal efficiently. You can download the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
 
 **Setup**
 
