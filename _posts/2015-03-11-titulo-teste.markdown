@@ -15,7 +15,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
 **About the solution**
 
-In this article i will explain a simple solution based in a recursive function and after that i will discuss how to optimize the code to achieve the goal efficiently. You can download the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
+In this article i'll show and provide a simple solution based in a recursive function, after that i will demonstrate two code changes that will increase the performance during the execution plan achieving the goal efficiently. You can download the solution  [CopyFasterToS3](https://github.com/aragostinho/CopyFasterToS3)
 
 **Setup**
 
