@@ -30,9 +30,9 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
 * Code:
 
-<pre>
-<code>
-         static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
+
+``` csharp 
+ static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
         {
             foreach (string dirPath in Directory.GetDirectories(localDir))
             {
@@ -54,8 +54,8 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
                 ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
             }
         }
-</code>
-</pre>
+
+```
 
 
 * Results:
