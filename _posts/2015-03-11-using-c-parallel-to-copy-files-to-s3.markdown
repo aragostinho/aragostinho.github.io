@@ -151,7 +151,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 
 
 
-**Comparing the results**
+**Comparing results**
 
 ![Summary](https://github.com/aragostinho/CopyFasterToS3/blob/master/images/Summary.PNG?raw=true"Perfomance Case 3")
 
