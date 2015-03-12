@@ -29,7 +29,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 **Using a simples foreach**
 
 * Code:
-<script src="https://gist.github.com/lazarofl/160ce7f47c0b2df1b89f.js"></script>
+<script src="https://gist.github.com/aragostinho/d7e18f5bf17f63f44d68.js"></script>
 
 
 
@@ -46,33 +46,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 **Using Parallell.ForEach to list all directories**
 
 * Code:
-
-<pre>
-<code>
-          static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
-        {
-            Parallel.ForEach(Directory.GetDirectories(localDir), dirPath =>
-            {
-                string currentFolder = Path.GetFileName(dirPath);
-                string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\", "/") : dirPath.Replace(@"\", "/");
-
-                Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
-                foreach (string filePath in Directory.GetFiles(dirPath))
-                {
-                    string currentFile = Path.GetFileName(filePath);
-                    using (Stream fileStream = File.Open(filePath, FileMode.Open))
-                    {
-                        pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,
-                         currentFile));
-                        Console.WriteLine(string.Format("Arquivo {0} replicado",
-                        Path.GetFileName(filePath)));
-                    }
-                }
-                ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
-            });
-        }
-</code>
-</pre>
+<script src="https://gist.github.com/aragostinho/e14a90f283137ab57dec.js"></script>
 
 
 * Results:
@@ -87,36 +61,7 @@ I need to copy these files to a s3 bucket  called  *bucket-replication*.
 **Using Parallell.ForEach to list all directories and images**
 
 * Code:
-
-<pre>
-<code>
-          static void ReplicationFilesRecursive(string localDir, BAmazonS3 pBAmazonS3, string cleanPath = null)
-        {
-            Parallel.ForEach(Directory.GetDirectories(localDir), dirPath =>
-            {
-                string currentFolder = Path.GetFileName(dirPath);
-                string currentKey = cleanPath != null ? dirPath.Replace(cleanPath, string.Empty).Replace(@"\",
-                                    "/") : dirPath.Replace(@"\", "/");
-
-                Console.WriteLine(string.Format("Diretorio {0} replicado", currentFolder));
-                Parallel.ForEach(Directory.GetFiles(dirPath), filePath =>
-                {
-                    string currentFile = Path.GetFileName(filePath);
-                    using (Stream fileStream = File.Open(filePath, FileMode.Open))
-                    {
-                        pBAmazonS3.SaveObject(fileStream, string.Format(@"{0}/{1}", currentKey,
-                        currentFile));
-                        Console.WriteLine(string.Format("Arquivo {0} replicado",
-                        Path.GetFileName(filePath)));
-                    }
-                });
-                ReplicationFilesRecursive(dirPath, pBAmazonS3, cleanPath);
-            });
-        }
-
-</code>
-</pre>
-
+<script src="https://gist.github.com/aragostinho/b61171582c8e9bebd1b8.js"></script>
 
 * Results:
 
