@@ -13,8 +13,9 @@ This article show step-by-step everything you need to know for configure HTTPS o
 
 
 **1) Configuring Certificate Manager on AWS**
-The first step is setup a certificate in Certificate Manager. The service Certificate manager is very useful to manage certificates without any concern about expirated date or maintenance.
-Follow these steps:
+
+The first step is setup a certificate on AWS Certificate Manager, so if you don't have a AWS account create it before following this step.
+
  
 
 
