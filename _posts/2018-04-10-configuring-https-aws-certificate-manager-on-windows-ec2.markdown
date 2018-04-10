@@ -17,13 +17,13 @@ This article show step-by-step everything you need to know for configure HTTPS o
 ## Table of Contents
 
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
-3. [Creating an EC2 server running Windows Server 2016]()
-4. [Creating and configuring an Application Load Balance]()
-6. [Configuring HTTPS protocol on EC2 using IIS]()
-7. [Configuring DNS zone using Route 53]()
-8. [Application Ajustements]()
-9. [SEO Questions]()
-10.[Conclusion]()
+2. [Creating an EC2 server running Windows Server 2016](#2-configuring-certificate-manager-on-aws)
+3. [Creating and configuring an Application Load Balance](#3-creating-and-configuring-an-application-load-balance)
+4. [Configuring HTTPS protocol on EC2 using IIS](#4-configuruing-https-protocol-on-ec2-using-iis)
+5. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
+6. [Application Ajustements](#6-application-adjustements)
+7. [SEO Questions](#7-seo-questions)
+8. [Conclusion](#8-conclusion)
 
 
 ## 1) Configuring Certificate Manager on AWS
@@ -77,22 +77,21 @@ Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate no
 
  ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image8.PNG?raw=true)
  
-  
-  
+    
  
-## 3) Creating an EC2 server running Windows Server 2016
+## 2) Creating an EC2 server running Windows Server 2016
 
-## 4) Creating and configuring an Application Load Balance
+## 3) Creating and configuring an Application Load Balance
 
-## 6) Configuring HTTPS protocol on EC2 using IIS
+## 4) Configuring HTTPS protocol on EC2 using IIS
 
-## 7) Configuring DNS zone using Route 53
+## 5) Configuring DNS zone using Route 53
 
-## 8) Application Ajustements
+## 6) Application Ajustements
 
-### 9) SEO Questions
+## 7) SEO Questions
  
-## 10) Conclusion
+## 8) Conclusion
 
 
 
