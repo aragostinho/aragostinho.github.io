@@ -37,7 +37,7 @@ Nononononono ononononononoo ononononono ononononononoo ononononono onononononono
 
 **4) Create and configuring an Application Load Balance**
 
-**5) Testing LoadBalance access**
+**5) Testing LoadBalance**
 
 **6) Configuring HTTPS protocol on Ec2 using IIS**
 
