@@ -33,8 +33,16 @@ If you need to use the same certificate to subdomain for example ***anything**.a
 ![Defining subdomains](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image3.PNG?raw=true)
 
 
+### 1.4) Select a validation option
+There are two possibilies for validate the request: Email or DNS. In this guide I will choose  Email option because it's easy and simples. If you choose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
 
-## 2) Validating the fresh certificate
+**IMPORTANT:** Verify if  you have any email account configured like: administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain or an email account in your AWS Account. It's very important because if you don't have the e-mail for verification can be delivery and process to validate the certificate will stopped until you create an account and re-send the validation .It's very boring and frustating.
+
+
+![Select a validation option](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image4.PNG?raw=true)
+
+
+
 
 Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
 
