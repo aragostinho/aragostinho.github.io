@@ -60,40 +60,26 @@ If everything was right you must receive an e-mail with a link for validate the 
  ![Receiving verification email](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image7.PNG?raw=true)
  
  
-### 1.7) Confirming the certificate
+### 1.8) Confirming the certificate
 Just confirm you SSL/TLS certificate and congrats you have a AWS Certificate now! 
 
- ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image7.PNG?raw=true)
+ ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image8.PNG?raw=true)
  
+  
  
- 
- 
+## 3) Creating an EC2 server running Windows Server 2016
 
-## 3) Create an EC2 server running Windows Server 2016
+## 4) Creating and configuring an Application Load Balance
 
-
-Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
-
-
-Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
-
-Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
-
-## 4) Create and configuring an Application Load Balance
-
-## 5) Testing LoadBalance
-
-## 6) Configuring HTTPS protocol on Ec2 using IIS
+## 6) Configuring HTTPS protocol on EC2 using IIS
 
 ## 7) Configuring DNS zone using Route 53
 
-**8) Application Ajustements**
+## 8) Application Ajustements
 
-**9) SEO Questions**
-
-**10) Final tests**
-
-
+### 9) SEO Questions
+ 
+## 10) Conclusion
 
 
 
