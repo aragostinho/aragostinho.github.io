@@ -61,10 +61,11 @@ If everything was right you must receive an e-mail with a link for validate the 
  
  
 ### 1.8) Confirming the certificate
-Just confirm you SSL/TLS certificate and congrats you have a AWS Certificate now! 
+Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate now! 
 
  ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image8.PNG?raw=true)
  
+  
   
  
 ## 3) Creating an EC2 server running Windows Server 2016
