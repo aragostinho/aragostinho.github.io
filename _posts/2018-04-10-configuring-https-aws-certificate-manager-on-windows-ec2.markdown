@@ -17,7 +17,7 @@ This article show step-by-step everything you need to know for configure HTTPS o
 The first step is setup a certificate on AWS Certificate Manager, so if you don't have a AWS account create it before following this step.
 
 
-**2) Receive and verify email from the fresh certificate **
+**2) Receive and verify email from the fresh certificate**
 
 Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
 
@@ -35,19 +35,19 @@ Nononononono ononononononoo ononononono ononononononoo ononononono onononononono
 
 Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
 
-**4) Create and configuring an Application Load Balance **
+**4) Create and configuring an Application Load Balance**
 
 **5) Testing LoadBalance access**
 
 **6) Configuring HTTPS protocol on Ec2 using IIS**
 
-**7) Configuring DNS zone using Route 53 **
+**7) Configuring DNS zone using Route 53**
 
-**8) Application Ajustements **
+**8) Application Ajustements**
 
-**9) SEO Questions **
+**9) SEO Questions**
 
-**10) Final tests **
+**10) Final tests**
 
 
 
