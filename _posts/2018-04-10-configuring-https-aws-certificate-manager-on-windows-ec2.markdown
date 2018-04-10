@@ -16,8 +16,14 @@ This article show step-by-step everything you need to know for configure HTTPS o
 
 The first step is setup a certificate on AWS Certificate Manager, so if you don't have an AWS account create it before following this step.
 
+*1.1) Request a public certificate*
+By default, public certificates are trusted by browsers and operating systems.
 
-**2) Receive and verify email from the fresh certificate**
+![Creating a public certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image1.PNG?raw=true)
+
+
+
+**2) Validating the fresh certificate**
 
 Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
 
