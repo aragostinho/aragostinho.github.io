@@ -18,12 +18,12 @@ This article show step-by-step everything you need to know for configure HTTPS o
 
 The first step is setup a certificate on AWS Certificate Manager, so if you don't have an AWS account create it before following this step.
 
-### 1.1) Request a public certificate
+### 1.1) Requesting a public certificate
 Select "Get Started" for provision certificates. By default, public certificates are trusted by browsers and operating systems.
 
 ![Creating a public certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image1.PNG?raw=true)
 
-### 1.2) Enter the domain that will use the certificate
+### 1.2) Entering the domain that will use the certificate
 
 ![Defining domains](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image2.PNG?raw=true)
 
@@ -33,7 +33,7 @@ If you need to use the same certificate to subdomain for example ***anything**.a
 ![Defining subdomains](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image3.PNG?raw=true)
 
 
-### 1.4) Select a validation option
+### 1.4) Selecting a validation option
 There are two possibilies for validate the request: Email or DNS. In this guide I will choose  Email option because it's easier than DNS option, but if you choose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
 
 **IMPORTANT:** Verify if you have access to manage emails accounts like *administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain* or an email account in your AWS Account. It's very important because if you don't have, the e-mail verification can't be delivery and the validation proccess will be stuck. It's very boring and frustating.
@@ -42,13 +42,32 @@ There are two possibilies for validate the request: Email or DNS. In this guide 
 ![Select a validation option](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image4.PNG?raw=true)
 
 
+### 1.5) Confirming all information
+Pay attention before confirm the information because you can change anything after certificate created (just delete and recreate).
 
 
-Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
+![Confirm all information](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image5.PNG?raw=true)
 
 
-Nononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo ononononono ononononononoo.
+### 1.6) Sending the verification e-mail
+How mentioned in the step 1.4 the verification email will send to following emails accounts acording of your domain and AWS Account configuration. 
 
+ ![Sending verification email](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image6.PNG?raw=true)
+
+### 1.7) Receiving the verification e-mail
+If everything was right you must receive an e-mail with a link for validate the certificate. 
+
+ ![Receiving verification email](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image7.PNG?raw=true)
+ 
+ 
+### 1.7) Confirming the certificate
+Just confirm you SSL/TLS certificate and congrats you have a AWS Certificate now! 
+
+ ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image7.PNG?raw=true)
+ 
+ 
+ 
+ 
 
 ## 3) Create an EC2 server running Windows Server 2016
 
