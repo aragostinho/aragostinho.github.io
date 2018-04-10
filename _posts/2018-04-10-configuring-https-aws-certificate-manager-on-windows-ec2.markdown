@@ -14,6 +14,18 @@ remove any maintanence responsability and an excelent certificate quality (you c
 This article show step-by-step everything you need to know for configure HTTPS on a EC2 running Windows Server 2016 using a SSL certificate from AWS Certificate Manager.
 
 
+## Table of Contents
+
+1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
+3. [Creating an EC2 server running Windows Server 2016]()
+4. [Creating and configuring an Application Load Balance]()
+6. [Configuring HTTPS protocol on EC2 using IIS]()
+7. [Configuring DNS zone using Route 53]()
+8. [Application Ajustements]()
+9. [SEO Questions]()
+10.[Conclusion]()
+
+
 ## 1) Configuring Certificate Manager on AWS
 
 The first step is setup a certificate on AWS Certificate Manager, so if you don't have an AWS account create it before following this step.
@@ -88,5 +100,6 @@ Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate no
 
 
  
+
 
 
