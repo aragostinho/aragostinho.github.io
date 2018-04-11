@@ -18,7 +18,7 @@ This article show step-by-step everything you need to know for configure HTTPS o
 
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
 2. [Creating an EC2 server running Windows Server 2016](#2-configuring-certificate-manager-on-aws)
-3. [Creating and configuring an Application Load Balance](#3-creating-and-configuring-an-application-load-balance)
+3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer)
 4. [Configuring HTTPS protocol on EC2 using IIS](#4-configuruing-https-protocol-on-ec2-using-iis)
 5. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
 6. [Application Ajustements](#6-application-adjustements)
@@ -80,8 +80,35 @@ Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate no
     
  
 ## 2) Creating an EC2 server running Windows Server 2016
+If you have a EC2 server configured and running Windows Server 2016 please skip this topic.
 
-## 3) Creating and configuring an Application Load Balance
+
+### 2.1) Choosing an AMI 
+Choose Windows 2016 Server 64 Bits Base AMI
+
+ ![Creating an EC2 From AMI](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image10.PNG?raw=true)
+
+### 2.2) Choosing an Instance Type
+
+Choose any EC2 Instance Type and of course, pay attention about [prices and differences each one](https://www.ec2instances.info/).  In this guide a T2.Micro instance type AMI will be use.
+  
+ ![Choosing an Instance Type](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image11.PNG?raw=true)
+
+
+### 2.3) Configuring Instance Details
+In this step there are a lot of itens to configuration but we will just focus on minimium and necessary itens like Network, SubtNet and Autosign IP. Just keep the default network and choose avaible subnet for the following Network. It's important to keep checked auto-assign public IP because the EC2 needs to be public for the Load Balancer.
+    
+ ![Configuring Instance Details](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image12.PNG?raw=true)
+
+
+### 2.4) Adding Storage
+A simple and cheap magnetic disk it's enough for small apps, but I really recommend SSD disks from sketch even if this is your scenario. The reason? It's painfull [changing EBS disk type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/limitations.html) after EC2 is in production. 
+
+
+ ![Adding Storage](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image13.PNG?raw=true)
+
+
+## 3) Creating and configuring an Application Load Balancer
 
 ## 4) Configuring HTTPS protocol on EC2 using IIS
 
