@@ -107,7 +107,31 @@ A simple and cheap magnetic disk it's enough for small apps, but I really recomm
 
  ![Adding Storage](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image13.PNG?raw=true)
 
+### 2.5) Defining Key Tags
+It's a good practice for organizing resources in AWS if you keep in mind find and manage quickly each resource.
 
+ ![Defining Keys](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image14.PNG?raw=true)
+
+### 2.6) Configuring Security Group
+I recommend create a new security group, define a good name e additional information. When AWS usage grows up for example EC2s, it's important to know what kind of Security Group is responsible for.  
+
+It's necessary to open the follow ports:
+ **Port 80** - Because it's a web server and you need the port for Load Balancer communitcation
+ **Port 3389** - To grant access for Remote Desktop Windows.
+
+
+ ![Configuring Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image15.PNG?raw=true)
+ 
+### 2.7) Creating Key pairs
+Finally, it's necessary to create or choose existing key pairs for granting access to EC2. *Please keep safe the keys!!*
+  
+  ![Creating Key pairs](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image16.PNG?raw=true)
+ 
+### 2.8) Running Ec2
+After the creation steps verify if the Ec2 is running well and test a remote access using Microsoft Remote Desktop. If you don't know how do it please read this article.
+ 
+   ![Running Ec2](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image17.PNG?raw=t)
+ 
 ## 3) Creating and configuring an Application Load Balancer
 
 ## 4) Configuring HTTPS protocol on EC2 using IIS
