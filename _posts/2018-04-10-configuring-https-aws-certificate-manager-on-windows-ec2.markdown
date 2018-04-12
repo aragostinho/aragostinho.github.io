@@ -145,10 +145,28 @@ But, is it possible to "attach" the AWS Certificate directly on EC2? No! It's no
 
 • **Classic Load Balancer (depreceated)** (previously Load Balancer. Nowadays you can use Application Load Balancer)
 
+### 3.1) Selecting an Application Load Balancer
+   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
+
 In this guide the Application Load Balancer will be choose.
 
+### 3.2) Basic Configuration, Listeners and Availability Zones
+   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image21.PNG?raw=t)
 
-   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
+**Basic Configuration**
+To define the basic configuration first of all write a name for the Load Balancer. Second, keep the same information in Scheme(internet-facing) and IPv4. It's possible using IPv6 or create a LB for internal usage (without public ip). It's not the case.
+
+**Listeners**
+This the way how your LB can listen and check connections request. For this example, it's necessary to configure HTTP (port 80) and HTTPS (443 port). 
+
+**Availability Zones**
+Keep the VPC default or if you account have more than one select the right VPC. The VPC will return a list of availibility zones and it's required to select more than one zone.
+
+
+### 3.2) Security Settings
+If the ACM was configured correctly it will show in the selectlist. Select it, it's time to improve SSL/TLS security.
+
+  ![Security Settings](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image22.PNG?raw=t)
 
 
 ## 4) Configuring HTTPS protocol on EC2 using IIS
