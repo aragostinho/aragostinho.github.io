@@ -31,13 +31,9 @@ This article show step-by-step everything you need to know for configure HTTPS o
 The first step is setup a certificate on AWS Certificate Manager (ACM), so if you don't have an AWS account create it before following this step. It's possible using ACM in:
 
 . Elastic Load Balancing 
-
 . Amazon CloudFront
-
 . Amazon API Gateway
-
 . AWS Elastic Beanstalk
-
 . AWS CloudFormation
 
 
