@@ -201,7 +201,7 @@ Review All information that was configured and create the ELB.
 ELB process creation needs a couple of minutes to be done. The status provisioning will change to active while it doenst happen smell the flower and take a coffee.
 
  ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
-
+ ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
 
 ## 4) Configuring HTTPS protocol on EC2 using IIS
 ## 5) Configuring DNS zone using Route 53
