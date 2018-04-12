@@ -28,7 +28,13 @@ This article show step-by-step everything you need to know for configure HTTPS o
 
 ## 1) Configuring Certificate Manager on AWS
 
-The first step is setup a certificate on AWS Certificate Manager, so if you don't have an AWS account create it before following this step.
+The first step is setup a certificate on AWS Certificate Manager (ACM), so if you don't have an AWS account create it before following this step. It's possible using ACM in:
+
+• Elastic Load Balancing 
+• Amazon CloudFront
+• Amazon API Gateway
+• AWS Elastic Beanstalk
+• AWS CloudFormation
 
 ### 1.1) Requesting a public certificate
 Select "Get Started" for provision certificates. By default, public certificates are trusted by browsers and operating systems.
@@ -133,6 +139,22 @@ After the creation steps verify if the Ec2 is running well and test a remote acc
    ![Running Ec2](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image17.PNG?raw=t)
  
 ## 3) Creating and configuring an Application Load Balancer
+Why we must have to create a Load Balancer? The answer is for using with a AWS Certificate (from AWS Certificate Manager). 
+But, is it possible to "attach" the AWS Certificate directly on EC2? No! It's not possible. When you create a Load Balancer with ACM it ables a cryptografied connection for the whole traffic, this security layer (let's say it) will be use between EC2 and DNS Zone. This is another big gain of productivity because there is no need to setup a certificate in OS (ex: Windows).
+
+**In AWS there are three options for Load Balancer:**
+
+• **Application Load Balancer:** Choose an Application Load Balancer when you need a flexible feature set for your web applications with HTTP and HTTPS traffic. Operating at the request level, Application Load Balancers provide advanced routing, TLS termination and visibility features targeted at application architectures, including microservices and containers.
+
+• **Network Load Balancer:** Choose a Network Load Balancer when you need ultra-high performance and static IP addresses for your application. Operating at the connection level, Network Load Balancers are capable of handling millions of requests per second while maintaining ultra-low latencies.
+
+• **Classic Load Balancer (depreceated)** (previously Load Balancer. Nowadays you can use Application Load Balancer)
+
+In this guide the Application Load Balancer will be choose.
+
+
+   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
+
 
 ## 4) Configuring HTTPS protocol on EC2 using IIS
 
