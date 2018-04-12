@@ -202,13 +202,13 @@ ELB process creation needs a couple of minutes to be done. The status provisioni
 
  ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
  ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
+ 
+ ### 3.7) Testing
+ 
+ 
 
-## 4) Configuring HTTPS protocol on EC2 using IIS
-## 5) Configuring DNS zone using Route 53
-## 6) Application Ajustements
-## 7) SEO Questions
-## 8) Conclusion
-
+ ## 4) Configuring DNS zone using Route 53
+ 
 
 
 
