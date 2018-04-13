@@ -211,7 +211,7 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
  
  To test HTTPS just change the protocol HTTP to HTTPS.
  
- ### IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used specific domain and subdomain (see topic 1.2 an 1.3)
+ > MPORTANT: The certificate will not be valid in this access because the configuration of ACM used specific domain and subdomain (see topic 1.2 an 1.3)
  
  ![Testing HTTPS access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test2.PNG?raw=t)
 
