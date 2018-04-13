@@ -43,7 +43,7 @@ If you need to use the same certificate to subdomain for example ***anything**.a
 
 
 ### 1.4) Selecting a validation option
-There are two possibilies for validate the request: Email or DNS. In this article I will choose  Email option because it's easier than DNS option, but if you choose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
+There are two possibilies for validate the request: Email or DNS. In this article I will choose Email option because it's easier than DNS option,but if you chose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
 
 **IMPORTANT:** Verify if you have access to manage emails accounts like *administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain* or an email account in your AWS Account. It's very important because if you don't have, the e-mail verification can't be delivery and the validation proccess will be stuck. It's very boring and frustating.
 
@@ -81,7 +81,7 @@ If you have an EC2 server configured and running Windows Server 2016 please skip
 
 
 ### 2.1) Choosing an AMI 
-Choose Windows 2016 Server 64 Bits Base AMI
+Select Windows 2016 Server 64 Bits Base AMI.
 
  ![Creating an EC2 From AMI](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image10.PNG?raw=true)
 
@@ -93,7 +93,7 @@ Choose any EC2 Instance Type and of course, pay attention about [prices and diff
 
 
 ### 2.3) Configuring Instance Details
-In this step there are a lot of itens to configuration but we will just focus on minimium and necessary itens like Network, SubtNet and Autosign IP. Just keep the default network and choose avaible subnet for the following Network. It's important to keep checked auto-assign public IP because the EC2 needs to be public for the Load Balancer.
+In this step there are a lot of items for configuring, but let's keep the focus on minimium and necessary items like Network, SubtNet and Autosign IP. Just keep the default network and choose avaible subnet for the following Network. It's important to keep checked auto-assign public IP because the EC2 needs to be public for the Load Balancer.
     
  ![Configuring Instance Details](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image12.PNG?raw=true)
 
@@ -121,7 +121,7 @@ It's necessary to open the follow ports:
  ![Configuring Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image15.PNG?raw=true)
  
 ### 2.7) Creating Key pairs
-Finally, it's necessary to create or choose existing key pairs for granting access to EC2. *Please keep safe the keys!!*
+Finally, it's necessary to create or select existing key pairs for granting access to EC2. *Please keep safe the keys!!*
   
   ![Creating Key pairs](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image16.PNG?raw=true)
  
