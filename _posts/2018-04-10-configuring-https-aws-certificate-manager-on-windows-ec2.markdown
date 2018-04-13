@@ -143,9 +143,10 @@ But, is it possible to "attach" the AWS Certificate directly on EC2? No! It's no
 • **Classic Load Balancer (depreceated)** (previously Load Balancer. Nowadays you can use Application Load Balancer)
 
 ### 3.1) Selecting an Application Load Balancer
-   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
-
 In this article the Application Load Balancer will be choose.
+
+   ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
+ 
 
 ### 3.2) Basic Configuration, Listeners and Availability Zones
    ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image21.PNG?raw=t)
