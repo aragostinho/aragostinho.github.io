@@ -200,7 +200,8 @@ ELB process creation needs a couple of minutes to be done. The status "provision
  ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
  ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
  
- ### 3.7) Testing
+
+### 3.7) Testing
 For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in the browser.
  
  ![DNS Name](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
