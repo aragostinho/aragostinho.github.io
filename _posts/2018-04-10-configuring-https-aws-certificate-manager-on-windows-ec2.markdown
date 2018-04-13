@@ -19,7 +19,7 @@ This article shows step-by-step everything you need to know about configuring HT
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
 2. [Creating an EC2 server running Windows Server 2016](#2-configuring-certificate-manager-on-aws)
 3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer) 
-4. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
+4. [Configuring DNS zone using Route 53](#4-configuring-dns-zone-using-route-53)
 
 
 ## 1) Configuring Certificate Manager on AWS
@@ -77,7 +77,7 @@ Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate no
     
  
 ## 2) Creating an EC2 server running Windows Server 2016
-If you have a EC2 server configured and running Windows Server 2016 please skip this topic.
+If you have an EC2 server configured and running Windows Server 2016 please skip to *[Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer)*.
 
 
 ### 2.1) Choosing an AMI 
