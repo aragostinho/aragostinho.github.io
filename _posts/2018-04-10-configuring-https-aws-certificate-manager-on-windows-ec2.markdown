@@ -222,12 +222,14 @@ To configurate DNS zone with ELB it's necessary first of all a DNS Zone configur
  ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)
  
  
- > ## CAUTION: DON'T LAUNCH YOUR APPLICATION BEFORE READ IT:
-> There are some application adjustments and SEO best practices that ou MUST do before launching your application:
  
+ 
+> ### CAUTION: DON'T LAUNCH YOUR APPLICATION BEFORE READ IT:
+> There are some application adjustments and SEO best practices that ou MUST do before launching your application: 
 > 1. Apply Cannonical HTTP to HTTPS. Should have exists only one point of access using HTTPs.
 > 2. Certify resource paths (img/js/css resources) all of them must rewrite HTTP to HTTPs
 > 3. Each old url (HTTP) must be redirect to (HTTPs). Use 301 redirect for it.
+
 
 
  It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you do all things correctly just enter with the domain name to access the server thought EBL. 
