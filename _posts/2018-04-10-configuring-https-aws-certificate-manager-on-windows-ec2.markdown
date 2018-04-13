@@ -209,14 +209,14 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
  
  To test HTTPS just change the protocol HTTP to HTTPS.
  
- #### IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used domain and subdomain (see topic 1.2 an 1.3)
+ #### IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used specific domain and subdomain (see topic 1.2 an 1.3)
  
  ![Testing HTTPS access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test2.PNG?raw=t)
 
 To solve this problem you need to configure DNS in Route 53.
 
  ## 4) Configuring DNS zone using Route 53   
-To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the recent ELB created and select it.  
+To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perform this, select "Alias: Yes", find the recent ELB created and select it.  
 
  ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
 
@@ -224,7 +224,7 @@ To configurate DNS zone with ELB it's necessary first of all a DNS Zone configur
 
  ![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
 
-After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS had alreadying routed to ELB and ACM granted a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
+After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS is alread routting to ELB and ACM granting a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
  
 > ### IMPORTANT!
 > There are some application adjustments and SEO best practices that you need to consider: 
