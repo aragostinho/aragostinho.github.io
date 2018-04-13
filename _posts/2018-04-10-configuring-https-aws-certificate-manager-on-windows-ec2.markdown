@@ -117,7 +117,8 @@ It's a good practice for organizing resources in AWS if you keep in mind find an
 I recommend create a new security group, define a good name e additional information. When AWS usage grows up for example EC2s, it's important to know what kind of Security Group is responsible for.  
 
 It's necessary to open the follow ports:
- **Port 80** - Because it's a web server and you need the port for Load Balancer communitcation
+ **Port 80** - Because it's a web server and you need the port for Load Balancer communication
+ **Port 443** - To grant SSL/TLS connections
  **Port 3389** - To grant access for Remote Desktop Windows.
 
 
@@ -164,20 +165,55 @@ Keep the VPC default or if you account have more than one select the right VPC. 
 
 
 ### 3.2) Security Settings
-If the ACM was configured correctly it will show in the selectlist. Select it, it's time to improve SSL/TLS security.
+If the ACM was configured correctly it will show in the Certificate Selectlist. Select it, it's time to improve SSL/TLS security.
 
   ![Security Settings](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image22.PNG?raw=t)
 
 
-## 4) Configuring HTTPS protocol on EC2 using IIS
+### 3.3) Security Group
+Select the **SAME security group** that your EC2 server are running. This is a commoum mistake during ELB configuration  people selecting differents securities groups and some of their ports are disallowed. This kind of lack of attention will do you waste much time until discovery the problem.
 
-## 5) Configuring DNS zone using Route 53
+  ![Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image23.PNG?raw=t)
 
-## 6) Application Ajustements
+### 3.4) Configure Routing
+Just keep all of information and define a name for the ELB Group. This part of configuration deals with routing requests to the targets (next config step) and provide a heath check layer (monitoring).
 
-## 7) SEO Questions
+  ![Configure Routing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image24.PNG?raw=t)
+
+### 3.5) Registering Targets
+Maybe during the steps you had thinking "What on earth is the EC2s server?" In this step it's time to select EC2 servers.
+In the case of this guide, just one EC2 it's necessary, yes I know it's sounds strange but at end of this article the goal is running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
+
+
+  ![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
+
+### 3.5) Review
+If you follow right these steps the Review page will show that everything is ok, but, if you received a warning message about Security Group, it's because you forgot to grant port 443. Please, go back and review your Security Group.
+
+ ![Warning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Warning.PNG?raw=t)
+
+Review All information that was configured and create the ELB.
+
+ ![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
  
-## 8) Conclusion
+
+### 3.6) Waintig for...drink a coffee
+ELB process creation needs a couple of minutes to be done. The status provisioning will change to active while it doenst happen smell the flowers and drin a coffee.
+
+ ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
+ ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
+ 
+ ### 3.7) Testing
+For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in Browser and try to access.
+ 
+ ![Testing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
+
+ ## 4) Configuring DNS zone using Route 53
+To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the ELB e select.  
+
+ ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)
+ 
+ It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you do all things correctly just enter with the domain name to access the server thought EBL. 
 
 
 
