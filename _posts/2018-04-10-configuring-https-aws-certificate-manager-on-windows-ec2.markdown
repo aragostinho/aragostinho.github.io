@@ -159,6 +159,7 @@ This the way how your LB can listen and check connections request. For this exam
 **Availability Zones**
 Keep the VPC default or if you account have more than one select the right VPC. The VPC will return a list of availability zones and it's required to select **more than one zone**.
 
+
 ### 3.2) Security Settings
 If the ACM was configured correctly it will show in the Certificate Selectlist. Select it, it's time to improve SSL/TLS security.
 
