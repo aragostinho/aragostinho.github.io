@@ -197,18 +197,24 @@ Review All information that was configured and create the ELB.
  ![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
  
 
-### 3.6) Waintig for...take a coffee
-ELB process creation needs a couple of minutes to be done. The status provisioning will change to active while it doenst happen smell the flower and take a coffee.
+### 3.6) Waintig for...drink a coffee
+ELB process creation needs a couple of minutes to be done. The status provisioning will change to active while it doenst happen smell the flowers and drin a coffee.
 
  ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
  ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
  
  ### 3.7) Testing
+For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in Browser and try to access.
  
- 
+ ![Testing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
 
  ## 4) Configuring DNS zone using Route 53
+To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the ELB e select.  
+
+ ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)
  
+ It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you do all things correctly just enter with the domain name to access the server thought EBL. 
+
 
 
 
