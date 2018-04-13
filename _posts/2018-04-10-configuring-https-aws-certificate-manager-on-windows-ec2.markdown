@@ -21,9 +21,6 @@ This article show step-by-step everything you need to know for configure HTTPS o
 3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer)
 4. [Configuring HTTPS protocol on EC2 using IIS](#4-configuruing-https-protocol-on-ec2-using-iis)
 5. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
-6. [Application Ajustements](#6-application-adjustements)
-7. [SEO Questions](#7-seo-questions)
-8. [Conclusion](#8-conclusion)
 
 
 ## 1) Configuring Certificate Manager on AWS
