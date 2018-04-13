@@ -17,7 +17,7 @@ This article shows step-by-step everything you need to know about configuring HT
 ## Table of Contents
 
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
-2. [Creating an EC2 server running Windows Server 2016](#2-configuring-certificate-manager-on-aws)
+2. [Creating an EC2 server running Windows Server 2016](#2-creating-an-ec2-server-running-windows-server-2016)
 3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer) 
 4. [Configuring DNS zone using Route 53](#4-configuring-dns-zone-using-route-53)
 
