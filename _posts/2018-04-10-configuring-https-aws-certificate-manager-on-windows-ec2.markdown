@@ -216,11 +216,11 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
 To solve this problem you need to configure DNS in Route 53.
 
  ## 4) Configuring DNS zone using Route 53   
-To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the ELB e select.  
+To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the recent ELB created and select it.  
 
  ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
 
- It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you do all things correctly just enter with the domain name to access the server thought EBL. 
+ It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you did all things correctly just enter with the domain name to access the server through EBL. 
 
  ![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
 
