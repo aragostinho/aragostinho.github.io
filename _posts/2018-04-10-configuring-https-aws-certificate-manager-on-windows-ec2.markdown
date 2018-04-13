@@ -19,7 +19,7 @@ This article shows step-by-step everything you need to know about configuring HT
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
 2. [Creating an EC2 server running Windows Server 2016](#2-creating-an-ec2-server-running-windows-server-2016)
 3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer) 
-4. [Configuring DNS zone using Route 53](#4-configuring-dns-zone-using-route-53)
+4. [Configuring DNS zone](#4-configuring-dns-zone)
 
 
 ## 1) Configuring Certificate Manager on AWS
@@ -217,7 +217,7 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
 
 To solve this problem you need to configure DNS in Route 53.
 
- ## 4) Configuring DNS zone using Route 53   
+## 4) Configuring DNS zone  
 To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perform this, select "Alias: Yes", find the recent ELB created and select it.  
 
  ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
