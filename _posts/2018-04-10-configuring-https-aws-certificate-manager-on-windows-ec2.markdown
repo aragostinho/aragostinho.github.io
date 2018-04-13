@@ -193,8 +193,8 @@ Review All information that was configured and create the ELB.
  ![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
  
 
-### 3.6) Waintig for...drink a coffee
-ELB process creation needs a couple of minutes to be done. The status provisioning will change to active while it doenst happen smell the flowers and drin a coffee.
+### 3.6) Waiting for active status
+ELB process creation needs a couple of minutes to be done. The status "provisioning" will change to active while it doesn't happen smell the flowers and drink a coffee.
 
  ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
  ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
@@ -205,6 +205,7 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
  ![DNS Name](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
  
  If everything was ok, the access will be route to EC2 Server through ELB DNS Name.
+ 
  ![Testing HTTP access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test1.PNG?raw=t)
  
  To test HTTPS just change the protocol HTTP to HTTPS.
