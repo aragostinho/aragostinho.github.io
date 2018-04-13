@@ -113,9 +113,9 @@ It's a good practice for organizing resources in AWS if you keep in mind find an
 I recommend create a new security group, define a good name e additional information. When AWS usage grows up for example EC2s, it's important to know what kind of Security Group is responsible for.  
 
 It's necessary to open the follow ports:
- **Port 80** - Because it's a web server and you need the port for Load Balancer communication
- **Port 443** - To grant SSL/TLS connections
- **Port 3389** - To grant access for Remote Desktop Windows.
+1. **Port 80** - Because it's a web server and you need the port for Load Balancer communication
+2. **Port 443** - To grant SSL/TLS connections
+3. **Port 3389** - To grant access for Remote Desktop Windows.
 
 
  ![Configuring Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image15.PNG?raw=true)
