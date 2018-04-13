@@ -220,7 +220,7 @@ To test HTTPS just change the protocol HTTP to HTTPS.
 To solve this problem you need to configure DNS in Route 53.
 
 ## 4) Updating DNS zone  
-To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perform this, select "Alias: Yes", find the recent ELB created and select it.  
+To configure DNS zone with ELB it's necessary first of all a DNS Zone configured.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perform this, select "Alias: Yes", find the recent ELB created and select it.  
 
 ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
 
