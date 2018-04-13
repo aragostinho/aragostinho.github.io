@@ -225,8 +225,8 @@ To configurate DNS zone with ELB it's necessary first of all a DNS Zone configur
 
 After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS had alreadying routed to ELB and ACM granted a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
 
-## CAUTION: DONT GO LIVE YOUR APPLICATION BEFORE READ ABOVE:
- There a lof of application adjustements and SEO best practices to do before go live your application using HTTPs:
+## CAUTION: DON'T LAUNCH YOUR APPLICATION BEFORE READ BELOW:
+There a lot of application adjustments and SEO best practices that ou MUST do before launching your application.
  
  . Apply Cannonical HTTP to HTTPS. Should have exists only one point of access using HTTPs.
  . Certify resource paths (img/js/css resources) all of them must rewrite HTTP to HTTPs
