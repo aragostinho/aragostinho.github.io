@@ -221,10 +221,9 @@ To configurate DNS zone with ELB it's necessary first of all a DNS Zone configur
  
  It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you do all things correctly just enter with the domain name to access the server thought EBL. 
 
+ ![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
 
-
-
-
+ After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS had alreadying routed to ELB and ACM granted a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
 
  
 
