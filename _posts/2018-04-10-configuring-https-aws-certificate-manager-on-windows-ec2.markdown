@@ -46,7 +46,7 @@ If you need to use the same certificate to subdomain for example **anything**.aw
 ### 1.4) Selecting a validation option
 There are two possibilies to validate the request: Email or DNS. In this article I will choose Email option because it's easier than DNS option,but if you chose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
 
-**IMPORTANT:** Verify if you have access to manage emails accounts like *administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain* or an email account in your AWS Account. It's very important because if you don't have, the e-mail verification can't be delivery and the validation proccess will be stuck. It's very boring and frustating.
+> **IMPORTANT:** Verify if you have access to manage emails accounts like *administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain* or an email account in your AWS Account. It's very important because if you don't have, the e-mail verification can't be delivery and the validation proccess will be stuck. It's very boring and frustating.
 
 
 ![Select a validation option](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image4.PNG?raw=true)
@@ -166,68 +166,67 @@ Keep the VPC default or if you account have more than one select the right VPC. 
 ### 3.2) Security Settings
 If the ACM was configured correctly it will show in the Certificate Selectlist. Select it, it's time to improve SSL/TLS security.
 
-  ![Security Settings](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image22.PNG?raw=t)
+![Security Settings](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image22.PNG?raw=t)
 
 
 ### 3.3) Security Group
 Select the **SAME security group** that your EC2 server are using. This is a commoum mistake during ELB configuration,  many people select differents security groups and some of their has ports that are disallowed. This kind of lack of attention will do you waste much time until discovery the problem.
 
-  ![Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image23.PNG?raw=t)
+![Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image23.PNG?raw=t)
 
 ### 3.4) Configure Routing
 Just keep all of information and define a name for the ELB Group. This part of configuration deals with routing requests to the targets (next config step) and provide a heath check layer (monitoring).
 
-  ![Configure Routing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image24.PNG?raw=t)
+![Configure Routing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image24.PNG?raw=t)
 
 ### 3.5) Registering Targets
 Maybe during the steps you have thinked "Where on earth is the EC2s server?" In this step it's time to select EC2 servers.
 In this article, just one EC2 it's necessary, yes I know it's sounds wierd but at end of this article the goal is just running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
 
-
-  ![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
+![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
 
 ### 3.5) Review
 If you follow right these steps the Review page will show that everything is ok, but, if you received a warning message about Security Group, it's because you forgot to grant port 443. Please, go back and review your Security Group.
 
- ![Warning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Warning.PNG?raw=t)
+![Warning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Warning.PNG?raw=t)
 
 Review all information that was configured and create the ELB.
 
- ![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
+![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
  
 
 ### 3.6) Waiting for active status
 ELB process creation needs a couple of minutes to be done. The status "provisioning" will change to active while it doesn't happen smell the flowers and drink a coffee.
 
- ![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
- ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
+![Waiting](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image27.PNG?raw=t)
+![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
  
 
 ### 3.7) Testing
 For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in the browser.
  
- ![DNS Name](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
+![DNS Name](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
  
- If everything was ok, the access will be route to EC2 Server through ELB DNS Name.
+If everything was ok, the access will be route to EC2 Server through ELB DNS Name.
  
- ![Testing HTTP access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test1.PNG?raw=t)
+![Testing HTTP access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test1.PNG?raw=t)
  
- To test HTTPS just change the protocol HTTP to HTTPS.
+To test HTTPS just change the protocol HTTP to HTTPS.
  
- > IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used specific domain and subdomain (see topic 1.2 an 1.3)
+> IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used specific domain and subdomain (see topic 1.2 an 1.3)
  
- ![Testing HTTPS access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test2.PNG?raw=t)
+![Testing HTTPS access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test2.PNG?raw=t)
 
 To solve this problem you need to configure DNS in Route 53.
 
 ## 4) Configuring DNS zone  
 To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perform this, select "Alias: Yes", find the recent ELB created and select it.  
 
- ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
+![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
 
- It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you did all things correctly just enter with the domain name to access the server through EBL. 
+It's necessary a couple of minutes for the DNS zone understand there are a ELB between EC2 IP. If you did all things correctly just enter with the domain name to access the server through EBL. 
 
- ![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
+![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
 
 After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS is alread routting to ELB and ACM granting a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
  
