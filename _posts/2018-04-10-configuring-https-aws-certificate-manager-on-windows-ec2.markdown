@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Configuring HTTPS on Windows EC2 with AWS Certificate Manager
 description: Step-by-Step to setting up HTTPS protocol on Windows EC2 server using AWS Certificate Manager
 layout: post
