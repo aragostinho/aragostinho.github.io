@@ -24,11 +24,11 @@ This article shows step-by-step everything you need to know about configuring HT
 
 ## 1) Configuring Certificate Manager on AWS
 
-The first step is setup a certificate on AWS Certificate Manager (ACM), so if you don't have an AWS account create it before following this step. It's possible using ACM in: *Elastic Load Balancing,  Amazon CloudFront, Amazon API Gateway, AWS Elastic Beanstalk e AWS CloudFormation*.
+The first step is setup a certificate on AWS Certificate Manager (ACM), so if you don't have an AWS account, create it before follow these steps. It's possible using ACM in: *Elastic Load Balancing,  Amazon CloudFront, Amazon API Gateway, AWS Elastic Beanstalk e AWS CloudFormation*.
 
 
 ### 1.1) Requesting a public certificate
-Select "Get Started" for provision certificates. By default, public certificates are trusted by browsers and operating systems.
+Select *"Get Started"* for provision certificates. By default, public certificates are trusted by browsers and operating systems.
 
 ![Creating a public certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image1.PNG?raw=true)
 
