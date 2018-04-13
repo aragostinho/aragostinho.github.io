@@ -33,6 +33,7 @@ Select *"Get Started"* for provision certificates. By default, public certificat
 ![Creating a public certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image1.PNG?raw=true)
 
 ### 1.2) Entering the domain that will use the certificate
+It's essential define how/what domains will use the certificate.
 
 ![Defining domains](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image2.PNG?raw=true)
 
