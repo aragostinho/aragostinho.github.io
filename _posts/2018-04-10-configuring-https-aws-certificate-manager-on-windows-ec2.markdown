@@ -43,7 +43,7 @@ If you need to use the same certificate to subdomain for example ***anything**.a
 
 
 ### 1.4) Selecting a validation option
-There are two possibilies for validate the request: Email or DNS. In this guide I will choose  Email option because it's easier than DNS option, but if you choose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
+There are two possibilies for validate the request: Email or DNS. In this article I will choose  Email option because it's easier than DNS option, but if you choose DNS, you need to configure some entries like CName. This configuration it's possible in Route 53 [Learn How Validate From DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html). 
 
 **IMPORTANT:** Verify if you have access to manage emails accounts like *administrator@domain, webmaster@domain, postmaster@domain, hostmaster@domain* or an email account in your AWS Account. It's very important because if you don't have, the e-mail verification can't be delivery and the validation proccess will be stuck. It's very boring and frustating.
 
@@ -87,7 +87,7 @@ Choose Windows 2016 Server 64 Bits Base AMI
 
 ### 2.2) Choosing an Instance Type
 
-Choose any EC2 Instance Type and of course, pay attention about [prices and differences each one](https://www.ec2instances.info/).  In this guide a T2.Micro instance type AMI will be use.
+Choose any EC2 Instance Type and of course, pay attention about [prices and differences each one](https://www.ec2instances.info/).  In this article a T2.Micro instance type AMI will be use.
   
  ![Choosing an Instance Type](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image11.PNG?raw=true)
 
@@ -145,20 +145,19 @@ But, is it possible to "attach" the AWS Certificate directly on EC2? No! It's no
 ### 3.1) Selecting an Application Load Balancer
    ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image19.PNG?raw=t)
 
-In this guide the Application Load Balancer will be choose.
+In this article the Application Load Balancer will be choose.
 
 ### 3.2) Basic Configuration, Listeners and Availability Zones
    ![Application Load Balancer](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image21.PNG?raw=t)
 
 **Basic Configuration**
-To define the basic configuration first of all write a name for the Load Balancer. Second, keep the same information in Scheme(internet-facing) and IPv4. It's possible using IPv6 or create a LB for internal usage (without public ip). It's not the case.
+To define the basic configuration first of all write a name for the Load Balancer. Second, keep the same information in Scheme(internet-facing) and IPv4. It's possible using IPv6 or create a LB for internal usage (without public ip). It's not the case for this article.
 
 **Listeners**
 This the way how your LB can listen and check connections request. For this example, it's necessary to configure HTTP (port 80) and HTTPS (443 port). 
 
 **Availability Zones**
-Keep the VPC default or if you account have more than one select the right VPC. The VPC will return a list of availibility zones and it's required to select more than one zone.
-
+Keep the VPC default or if you account have more than one select the right VPC. The VPC will return a list of availability zones and it's required to select **more than one zone**.
 
 ### 3.2) Security Settings
 If the ACM was configured correctly it will show in the Certificate Selectlist. Select it, it's time to improve SSL/TLS security.
@@ -167,7 +166,7 @@ If the ACM was configured correctly it will show in the Certificate Selectlist. 
 
 
 ### 3.3) Security Group
-Select the **SAME security group** that your EC2 server are running. This is a commoum mistake during ELB configuration  people selecting differents securities groups and some of their ports are disallowed. This kind of lack of attention will do you waste much time until discovery the problem.
+Select the **SAME security group** that your EC2 server are using. This is a commoum mistake during ELB configuration,  many people select differents security groups and some of their has ports that are disallowed. This kind of lack of attention will do you waste much time until discovery the problem.
 
   ![Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image23.PNG?raw=t)
 
@@ -177,8 +176,8 @@ Just keep all of information and define a name for the ELB Group. This part of c
   ![Configure Routing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image24.PNG?raw=t)
 
 ### 3.5) Registering Targets
-Maybe during the steps you had thinking "What on earth is the EC2s server?" In this step it's time to select EC2 servers.
-In the case of this guide, just one EC2 it's necessary, yes I know it's sounds strange but at end of this article the goal is running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
+Maybe during the steps you have thinked "Where on earth is the EC2s server?" In this step it's time to select EC2 servers.
+In this article, just one EC2 it's necessary, yes I know it's sounds wierd but at end of this article the goal is just running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
 
 
   ![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
@@ -188,7 +187,7 @@ If you follow right these steps the Review page will show that everything is ok,
 
  ![Warning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Warning.PNG?raw=t)
 
-Review All information that was configured and create the ELB.
+Review all information that was configured and create the ELB.
 
  ![Review](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image26.PNG?raw=t)
  
