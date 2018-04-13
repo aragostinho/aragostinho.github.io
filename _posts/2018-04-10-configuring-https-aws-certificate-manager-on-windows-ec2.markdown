@@ -201,9 +201,18 @@ ELB process creation needs a couple of minutes to be done. The status provisioni
  ![Provisioning](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image28.PNG?raw=t)
  
  ### 3.7) Testing
-For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in Browser and try to access.
+For testing the recently ELB created, just copy the DNS name from ELB Basic configuration put in the browser.
  
- ![Testing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
+ ![DNS Name](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image29.PNG?raw=t)
+ 
+ If everything was ok, the access will be route to EC2 Server through ELB DNS Name.
+ ![Testing HTTP access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test1.PNG?raw=t)
+ 
+ To test HTTPS just change the protocol HTTP to HTTPS.
+ #### IMPORTANT: The certificate will not be valid in this access because the configuration of ACM used domain and subdomain (remember topic 1.2 an 1.3)
+ ![Testing HTTPS access](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Test2.PNG?raw=t)
+
+To solve this problem you need to configure DNS in Route 53.
 
  ## 4) Configuring DNS zone using Route 53
 To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the ELB e select.  
