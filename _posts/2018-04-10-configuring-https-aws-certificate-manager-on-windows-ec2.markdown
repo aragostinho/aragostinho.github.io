@@ -11,16 +11,15 @@ layout: post
 The service Certificate Manager from Amazon Web Services (AWS) is a very useful service to manage certificates without any concern about  maintenance for example certification expiration date.
 You can setup a certificate in few minutes and use it on AWS Resource, for example a EC2 through a Load Balance. The benefits are reducing setup time, low certificate costs,
 remove any maintanence responsability and an excelent certificate quality (you can check using [Qualys SSL Labs](https://www.ssllabs.com/)).
-This article show step-by-step everything you need to know for configure HTTPS on a EC2 running Windows Server 2016 using a SSL certificate from AWS Certificate Manager.
+This article shows step-by-step everything you need to know about configuring HTTPS on a EC2 server running Windows Server 2016 using a SSL certificate from AWS Certificate Manager.
 
 
 ## Table of Contents
 
 1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
 2. [Creating an EC2 server running Windows Server 2016](#2-configuring-certificate-manager-on-aws)
-3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer)
-4. [Configuring HTTPS protocol on EC2 using IIS](#4-configuruing-https-protocol-on-ec2-using-iis)
-5. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
+3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer) 
+4. [Configuring DNS zone using Route 53](#5-configuring-dns-zone-using-route-53)
 
 
 ## 1) Configuring Certificate Manager on AWS
@@ -217,6 +216,7 @@ For testing the recently ELB created, just copy the DNS name from ELB Basic conf
 To solve this problem you need to configure DNS in Route 53.
 
  ## 4) Configuring DNS zone using Route 53
+    
 To configurate DNS zone with ELB it's necessary first of all a DNS Zone configurated.  After that you just need to change the value of entry A (normally an IP) with the ELB DNS. To perfom this, select "Alias: Yes", find the ELB e select.  
 
  ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)
@@ -227,12 +227,16 @@ To configurate DNS zone with ELB it's necessary first of all a DNS Zone configur
 
 After a couple of minutes, try to access using you domain with HTTP or HTTPS. The DNS had alreadying routed to ELB and ACM granted a valid certificate to domain. If you followed each step carefully: **CONGRATULATIONS YOU HAVE A SSL CERTIFICATE RUNNING ON AWS EC2**
 
-## CAUTION: DON'T LAUNCH YOUR APPLICATION BEFORE READ BELOW:
-There are some application adjustments and SEO best practices that ou MUST do before launching your application.
  
- 1. Apply Cannonical HTTP to HTTPS. Should have exists only one point of access using HTTPs.
+ <aside class="notice">
+ ## CAUTION: DON'T LAUNCH YOUR APPLICATION BEFORE READ IT:
+There are some application adjustments and SEO best practices that ou MUST do before launching your application:
+ 
+  1. Apply Cannonical HTTP to HTTPS. Should have exists only one point of access using HTTPs.
  2. Certify resource paths (img/js/css resources) all of them must rewrite HTTP to HTTPs
  3. Each old url (HTTP) must be redirect to (HTTPs). Use 301 redirect for it.
+ 
+  </aside>
  
  
  
