@@ -119,6 +119,7 @@ It's necessary to open the follow ports:
 
 
  ![Configuring Security Group](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image15.PNG?raw=true)
+ *In this screenshot I forgot to add Port 443. Please don't be like me ;)*
  
 ### 2.7) Creating Key pairs
 Finally, it's necessary to create or select existing key pairs for granting access to EC2. *Please keep safe the keys!!*
