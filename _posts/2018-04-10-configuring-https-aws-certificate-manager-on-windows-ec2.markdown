@@ -180,7 +180,7 @@ Just keep all of information and define a name for the ELB Group. This part of c
 ![Configure Routing](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image24.PNG?raw=t)
 
 ### 3.5) Registering Targets
-Maybe during the steps you have thinked "Where on earth is the EC2s server?" In this step it's time to select EC2 servers.
+Maybe during the steps you thinked "Where on earth is the EC2s server?" In this step it's time to select EC2 servers.
 In this article, just one EC2 it's necessary, yes I know it's sounds wierd but at end of this article the goal is just running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
 
 ![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
