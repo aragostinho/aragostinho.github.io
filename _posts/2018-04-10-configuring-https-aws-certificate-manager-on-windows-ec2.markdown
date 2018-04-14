@@ -15,7 +15,7 @@ This article shows step-by-step everything you need to know about configuring HT
 
 ## Table of Contents
 
-1. [Configuring Certificate Manager on AWS](#1-configuring-certificate-manager-on-aws)
+1. [Configuring Certificate Manager on AWS](#1-configuring-a-certificate-manager-on-aws)
 2. [Creating an EC2 server running Windows Server 2016](#2-creating-an-ec2-server-running-windows-server-2016)
 3. [Creating and configuring an Application Load Balancer](#3-creating-and-configuring-an-application-load-balancer) 
 4. [Updating DNS zone](#4-updating-dns-zone)
@@ -84,6 +84,8 @@ If you have an EC2 server configured and running Windows Server 2016 please skip
 Select Windows 2016 Server 64 Bits Base AMI.
 
  ![Creating an EC2 From AMI](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image10.PNG?raw=true)
+ 
+ > IMPORTANT: You need to [install and configure](https://help.upcurvecloud.com/wmobile/howto_install_iis_win2016.htm) IIS and this article will not talk about it.
 
 ### 2.2) Choosing an Instance Type
 
