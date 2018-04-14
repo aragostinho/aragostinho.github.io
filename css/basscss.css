@@ -13,6 +13,13 @@ body, button, input, select, textarea, pre {
   margin: 0;
 }
 
+body { 
+    background-image: url('https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/blog/https.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; 
+}
+
 h1, h2, h3, h4, h5, h6, p, dl, ol, ul {
   margin-top: 0;
   margin-bottom: 1rem;
