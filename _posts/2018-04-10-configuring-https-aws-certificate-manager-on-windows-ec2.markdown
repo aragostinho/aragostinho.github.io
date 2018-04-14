@@ -9,7 +9,7 @@ layout: post
 ## Introduction
 
 The service Certificate Manager from Amazon Web Services (AWS) is a very useful service to manage certificates without any concern about  maintenance for example certification expiration date.
-You can setup a certificate in few minutes and use it on AWS Resource, for example a EC2 through a Load Balance. The benefits are reducing setup time, low certificate costs,
+You can setup a certificate in few minutes and use it on AWS Resource, for example a EC2 through a Load Balance. The benefits are reducing setup time, low certificate costs,it’s necessary
 remove any maintanence responsability and an excelent certificate quality (you can check using [Qualys SSL Labs](https://www.ssllabs.com/)).
 This article shows step-by-step everything you need to know about configuring HTTPS on a EC2 server running Windows Server 2016 using a SSL certificate from AWS Certificate Manager.
 
@@ -123,7 +123,7 @@ It's necessary to open the follow ports:
  *In this screenshot I forgot to add Port 443. Please don't be like me ;)*
  
 ### 2.7) Creating Key pairs
-Finally, it's necessary to create or select existing key pairs for granting access to EC2. *Please keep safe the keys!!*
+Finally, create or select existing key pairs for granting access to EC2. *Please keep safe the keys!!*
   
   ![Creating Key pairs](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image16.PNG?raw=true)
  
@@ -157,7 +157,7 @@ In this article the Application Load Balancer will be choose.
 To define the basic configuration first of all write a name for the Load Balancer. Second, keep the same information in Scheme(internet-facing) and IPv4. It's possible using IPv6 or create a LB for internal usage (without public ip). It's not the case for this article.
 
 **Listeners**
-This the way how your LB can listen and check connections request. For this example, it's necessary to configure HTTP (port 80) and HTTPS (443 port). 
+This the way how your LB can listen and check connections request. For this example, is necessary to configure HTTP (port 80) and HTTPS (443 port). 
 
 **Availability Zones**
 Keep the VPC default or if you account have more than one select the right VPC. The VPC will return a list of availability zones and it's required to select **more than one zone**.
@@ -181,7 +181,7 @@ Just keep all of information and define a name for the ELB Group. This part of c
 
 ### 3.5) Registering Targets
 Maybe during the steps you thinked "Where on earth is the EC2s server?" In this step it's time to select EC2 servers.
-In this article, just one EC2 it's necessary, yes I know it's sounds wierd but at end of this article the goal is just running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
+In this article, just one EC2 server is enough, yes I know it's sounds wierd but at end of this article the goal is just running HTTPS using ACM. The Load Balancer is the way to reach the goal, but its real capabilities will not be use for it.
 
 ![Registering Targets](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image25.PNG?raw=t)
 
