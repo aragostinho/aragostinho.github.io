@@ -9,8 +9,7 @@ layout: post
 ## Introduction
 
 The service Certificate Manager from Amazon Web Services (AWS) is a very useful service to manage certificates without any concern about  maintenance for example certification expiration date.
-You can setup a certificate in few minutes and use it on AWS Resource, for example a EC2 through a Load Balance. The benefits are reducing setup time, low certificate costs,it’s necessary
-remove any maintanence responsability and an excelent certificate quality (you can check using [Qualys SSL Labs](https://www.ssllabs.com/)).
+You can setup a certificate in few minutes and use it on AWS Resource, for example a EC2 through a Load Balance. The benefits are reducing setup time, low certificate costs, zero maintenance and an excelent certificate quality (you can check using [Qualys SSL Labs](https://www.ssllabs.com/)).
 This article shows step-by-step everything you need to know about configuring HTTPS on a EC2 server running Windows Server 2016 using a SSL certificate from AWS Certificate Manager.
 
 
