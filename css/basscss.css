@@ -119,6 +119,10 @@ strong, .bold {
   text-align: right;
 }
 
+.measuretop{
+    max-width: 58rem;
+}
+
 .measure {
   max-width: 48rem;
 }
