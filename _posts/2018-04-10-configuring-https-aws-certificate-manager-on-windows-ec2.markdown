@@ -27,7 +27,7 @@ The first step is setup a certificate on AWS Certificate Manager (ACM), so if yo
 
 
 ### 1.1) Requesting a public certificate
-Select *"Get Started"* for provision certificates. By default, public certificates are trusted by browsers and operating systems.
+Select *"Get Started"* to provision certificates. By default, public certificates are trusted by browsers and operating systems.
 
 ![Creating a public certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image1.PNG?raw=true)
 
