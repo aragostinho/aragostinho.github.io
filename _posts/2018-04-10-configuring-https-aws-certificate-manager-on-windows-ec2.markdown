@@ -101,7 +101,7 @@ In this step there are a lot of items for configuring, but let's keep the focus 
 
 
 ### 2.4) Adding EBS Storage
-A simple and cheap magnetic disk it's enough for small apps, but I really recommend SSD disks from sketch even if this is your scenario. The reason? It's painfull [changing EBS disk type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/limitations.html) after EC2 is in production. 
+A simple and cheap magnetic disk it's enough for small apps, but I really recommend SSD disks from sketch even if this is your scenario. The reason? It's painfull [changing EBS disk type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/limitations.html) after EC2 is running in production. 
 
 
  ![Adding Storage](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image13.PNG?raw=true)
