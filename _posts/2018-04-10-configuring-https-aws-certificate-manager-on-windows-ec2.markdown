@@ -70,7 +70,7 @@ If everything was configured correctly you must receive an e-mail with a link fo
  
  
 ### 1.8) Confirming the certificate
-Just confirm you SSL/TLS certificate and congrats you have an AWS Certificate now! 
+Just confirm your SSL/TLS certificate and congrats you have an AWS Certificate now! 
 
  ![Confirming the certificate](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image8.PNG?raw=true)
  
