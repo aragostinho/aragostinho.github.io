@@ -64,7 +64,7 @@ How mentioned in the step 1.4 the verification email will send to following emai
  ![Sending verification email](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image6.PNG?raw=true)
 
 ### 1.7) Receiving the verification e-mail
-If everything was right you must receive an e-mail with a link for validate the certificate. 
+If everything was configured correctly you must receive an e-mail with a link for validate the certificate. 
 
  ![Receiving verification email](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image7.PNG?raw=true)
  
