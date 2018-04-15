@@ -129,7 +129,7 @@ Finally, create or select existing key pairs for granting access to EC2. *Please
   ![Creating Key pairs](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image16.PNG?raw=true)
  
 ### 2.8) Running Ec2
-After the creation steps verify if the Ec2 is running well and test a remote access using Microsoft Remote Desktop. If you don't know how do it please read this article.
+After the creation steps verify if the Ec2 is running well and test a remote access using Microsoft Remote Desktop. If you don't know how to do it please read this article.
  
    ![Running Ec2](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image17.PNG?raw=t)
  
