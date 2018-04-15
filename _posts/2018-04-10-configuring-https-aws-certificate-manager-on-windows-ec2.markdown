@@ -129,12 +129,12 @@ Finally, create or select existing key pairs for granting access to EC2. *Please
   ![Creating Key pairs](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image16.PNG?raw=true)
  
 ### 2.8) Running Ec2
-After the creation steps verify if the Ec2 is running well and test a remote access using Microsoft Remote Desktop. If you don't know how to do it please read this article.
+After the creation steps verify if the Ec2 is running well and test a remote access using Microsoft Remote Desktop. If you don't know how to do it please read this [article](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html).
  
    ![Running Ec2](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Image17.PNG?raw=t)
  
 ## 3) Creating and configuring an Application Load Balancer
-Why we must have to create a Load Balancer? The answer is for using with a AWS Certificate (from AWS Certificate Manager). 
+Why we must have to create a Load Balancer? The answer is to use it with a AWS Certificate (from AWS Certificate Manager). 
 But, is it possible to "attach" the AWS Certificate directly on EC2? No! It's not possible. When you create a Load Balancer with ACM it ables a cryptografied connection for the whole traffic, this security layer (let's say it) will be use between EC2 and DNS Zone. This is another big gain of productivity because there is no need to setup a certificate in OS (ex: Windows).
 
 **In AWS there are three options for Load Balancer:**
