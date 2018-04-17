@@ -225,7 +225,7 @@ To configure DNS zone with ELB is necessary first of all a DNS Zone configured. 
 
 ![DNS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/DNS.PNG?raw=t)  
 
-It's necessary a *couple of minutes* for the DNS zone understand there are a ELB between EC2 IP. If you did all things correctly just enter with the domain name to access the server through EBL. 
+It's necessary a **couple of minutes** for the DNS zone understand there are a ELB between EC2 IP. If you did all things correctly just enter with the domain name to access the server through EBL. 
 
 ![SUCCESS](https://github.com/aragostinho/aragostinho.github.io/blob/master/_imgs/https/Success.PNG?raw=t)
 
